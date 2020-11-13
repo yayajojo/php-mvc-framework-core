@@ -1,0 +1,12 @@
+{
+    "name": "mayjhao/php-mvc-framework-core",
+    "description": "This is a self-made micro mvc framework core for learning framework concepts.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "May Jhao",
+            "email": "fleetinghappines@gmail.com"
+        }
+    ],
+    "require": {}
+}

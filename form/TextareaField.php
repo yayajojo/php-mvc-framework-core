@@ -1,5 +1,5 @@
 <?php
-namespace app\core\form;
+namespace mayjhao\phphmvc\form;
 
  abstract class TextareaField extends BaseField
 {

@@ -1,5 +1,5 @@
 <?php
-namespace app\core\exceptions;
+namespace mayjhao\phphmvc\exceptions;
 
 use Exception;
 

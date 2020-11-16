@@ -1,10 +1,10 @@
 <?php
 
-namespace app\core\db;
+namespace mayjhao\phphmvc\db;
 
-use app\core\Application;
-use app\core\Model;
-use app\core\UserModel;
+use mayjhao\phphmvc\Application;
+use mayjhao\phphmvc\Model;
+use mayjhao\phphmvc\UserModel;
 
 abstract class DbModel extends Model
 {

@@ -1,12 +1,12 @@
 <?php
-namespace app\core;
+namespace mayjhao\phphmvc;
 
-use app\core\middlewares\BaseMiddleware;
+use mayjhao\phphmvc\middlewares\BaseMiddleware;
 
 abstract class Controller
 {  
     /**
-     * @var app\core\middlewares\BaseMiddleware[]
+     * @var mayjhao\phphmvc\middlewares\BaseMiddleware[]
      */
     
     protected $middlewares = [];

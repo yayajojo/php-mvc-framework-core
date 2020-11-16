@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core\db;
+namespace mayjhao\phphmvc\db;
 
-use app\core\Application;
+use mayjhao\phphmvc\Application;
 use PDO;
 
 

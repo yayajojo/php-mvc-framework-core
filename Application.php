@@ -1,9 +1,9 @@
 <?php
 
-namespace app\core;
+namespace mayjhao\phphmvc;
 
-use app\core\db\Database;
-use app\core\db\DbModel;
+use mayjhao\phphmvc\db\Database;
+use mayjhao\phphmvc\db\DbModel;
 use app\models\User;
 use Exception;
 

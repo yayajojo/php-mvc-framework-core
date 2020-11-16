@@ -1,7 +1,7 @@
 <?php
-namespace app\core\form;
+namespace mayjhao\phphmvc\form;
 
-use app\core\Model;
+use mayjhao\phphmvc\Model;
 
 abstract class InputField extends BaseField
 {

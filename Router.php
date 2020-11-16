@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace mayjhao\phphmvc;
 
-use app\core\exceptions\NotFoundException;
+use mayjhao\phphmvc\exceptions\NotFoundException;
 
 class Router
 {

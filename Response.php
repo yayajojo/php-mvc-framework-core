@@ -1,5 +1,5 @@
 <?php
-namespace app\core;
+namespace mayjhao\phphmvc;
 
 class Response
 {

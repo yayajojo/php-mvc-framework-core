@@ -8,5 +8,9 @@
             "email": "fleetinghappines@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload":{
+        "psr-4": {
+            "mayjhao\\phphmvc\\":""}
+    }
 }

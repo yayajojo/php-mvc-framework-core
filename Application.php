@@ -9,6 +9,10 @@ use Exception;
 
 class Application
 {
+    
+    const EVENT_BEFORE_REQUEST = 'beforeRequset';
+    const EVENT_AFTER_REQUEST = 'afterRequset';
+    protected $eventListeners = [];
     public static $ROOT_DIR;
     public $request;
     public $response;
@@ -23,6 +27,7 @@ class Application
 
     public function __construct(string $rootPath, array $config)
     {
+        
         self::$ROOT_DIR = $rootPath;
         $this->request = new Request();
         $this->response = new Response();
@@ -42,12 +47,14 @@ class Application
     }
     public function run()
     {
+        $this->triggerEvent(self::EVENT_BEFORE_REQUEST);
         try{
             $this->router->resolve();
         }catch(Exception $e){
             $this->response->setStatusCode($e->getCode());
             echo $this->view->renderView('_error','main',['exception'=>$e]);
         }
+  
     }
 
     public function isGuest()
@@ -66,5 +73,19 @@ class Application
     {
         $this->user = null;
         $this->session->remove('user');
+    }
+
+    
+    public function on($event, $callback)
+    {
+     return $this->eventListeners[$event][] = $callback;
+    }
+
+    public function triggerEvent($event)
+    {
+        $callbacks = $this->eventListeners[$event]??[];
+        foreach($callbacks as $callback){
+            call_user_func($callback);
+        }
     }
 }

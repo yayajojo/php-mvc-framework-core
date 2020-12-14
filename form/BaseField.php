@@ -19,7 +19,7 @@ abstract class BaseField
        
     }
     
-    abstract public function lables($attribute);
+    abstract public function labels($attribute);
     abstract protected function renderInput();
     public function __toString()
     {
@@ -32,7 +32,7 @@ abstract class BaseField
          </div>
          </div>',
             $this->attribute,
-            $this->lables($this->attribute)??$this->attribute,
+            $this->labels($this->attribute)??$this->attribute,
             $this->renderInput(),
             $this->model->hasError($this->attribute) ? ' invalid-feedback' : '',
             $this->model->hasError($this->attribute) ? $this->model->getFirstError($this->attribute) : '',
